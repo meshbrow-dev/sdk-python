@@ -2,11 +2,10 @@
 
 import json
 
-import httpx
 import pytest
 from pytest_httpx import HTTPXMock
 
-from meshbrow import AsyncMeshbrow, Session, Screenshot, Fleet
+from meshbrow import AsyncMeshbrow, Screenshot
 
 
 BASE_URL = "https://api.meshbrow.dev"

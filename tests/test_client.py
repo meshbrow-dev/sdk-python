@@ -74,7 +74,7 @@ class TestCreateSession:
             status_code=201,
         )
 
-        session = client.create_session(profile_id="prof_123")
+        client.create_session(profile_id="prof_123")
         request = httpx_mock.get_requests()[0]
         body = json.loads(request.content)
         assert body["profile_id"] == "prof_123"
@@ -87,7 +87,7 @@ class TestCreateSession:
             status_code=201,
         )
 
-        session = client.create_session(viewport={"width": 1920, "height": 1080})
+        client.create_session(viewport={"width": 1920, "height": 1080})
         request = httpx_mock.get_requests()[0]
         body = json.loads(request.content)
         assert body["viewport"] == {"width": 1920, "height": 1080}
